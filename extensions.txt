@@ -1,0 +1,26 @@
+Hi,
+
+Below is a brief description of the extensions that I included:
+
+1. I added a _score attribute in wave.py, which keeps track of the player's score.
+The current score is displayed during the whole game. Eeach alien is worth 10*(index of alien's row + 1) points.
+
+2. I also added different sounds for the moments when the ship and the aliens fire a bolt, and when the ship or an alien is destroyed.
+There is an active message during the active state of the game which says that the player can turn the sound on/off by pressing 's'.
+However, when I play the game on my computer, there is a slight sound delay (around 1 sec). I'm not sure why this is the
+case as I made sure that I run the sounds right after a bolt is fired/the ship or the alien is destroyed.
+
+3. Every time an alien is killed, the rest of the aliens speed up.
+
+4. I added an attribute in app.py which keeps track of the highest score that the player has achieved so far. If the player sets a new record,
+a congratulation message appears after the game end. The Personal Best score is displayed while the user is playing (STATE_ACTIVE and STATE_PAUSED).
+
+5. There is an attribute _lives in app.py which keeps track of the player's remaining lives. A message which says how many lives left
+is displayed while the user is playing (STATE_ACTIVE and STATE_PAUSED).
+
+6. After the game finishes, the user is given an option to play again by pressing 's'.
+
+7. I used the Arcade font style and added a black background (a GRectangle object).
+
+After I added all these extensions, I noticed that the bolts are moving more slowly (maybe because the whole game became slower) 
+so I changed the constant BOLT_SPEED from 10 to 15. Now the bolts are moving reasonably quickly.
